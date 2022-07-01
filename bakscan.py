@@ -2,7 +2,7 @@
 # @Author: mrwu
 # @Date:   2022-03-07 09:43:19
 # @Last Modified by:   mrwu
-# @Last Modified time: 2022-07-01 17:47:44
+# @Last Modified time: 2022-07-01 18:08:38
 
 from multiprocessing import Pool
 from tqdm import tqdm
@@ -54,6 +54,10 @@ def open_url(url):
 
 def run(url):
     try:
+        #代理
+        # proxy = {"socks": "127.0.0.1:7890"} #代理
+        # html = requests.get(url, headers=header,verify=False,timeout=(2,2), proxies=proxy)
+        #代理
         html = requests.get(url, headers=header,verify=False,timeout=(2,2))
         html.encoding = 'utf-8'
         code = html.status_code
