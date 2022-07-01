@@ -74,7 +74,7 @@ if __name__ == '__main__':
 
     parser = argparse.ArgumentParser()
     parser.add_argument('-u','--url', default='url.txt',help="URL文件路径")
-    parser.add_argument('-t','--threads', default='60',help="进程数，不要超过60")
+    parser.add_argument('-t','--threads', default='20',help="进程数，不要超过60")
     args = parser.parse_args()
 
     urllist = open_url(args.url)
